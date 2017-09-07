@@ -1,0 +1,176 @@
+{
+  "code": 200,
+  "msg": "获取成功",
+  "datas": [
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "116.6913335363",
+          "latitude":"39.5556835005",
+          "scale":"800",
+          "Contacts":"张域名",
+          "phone":"15544568888"
+        },
+        {
+          "InControl": "爱民东道街道东北",
+          "longitude": "116.6829410710",
+          "latitude":"39.5405660128",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        },
+        {
+          "InControl": "北华航天工业学院",
+          "longitude": "303",
+          "latitude":"112.000",
+          "scale":"1000",
+          "Contacts":"申先生",
+          "phone":"15566668888"
+        }
+        
+      ]
+   
+}

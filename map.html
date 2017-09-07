@@ -12,7 +12,12 @@
 <title>廊坊企业云服务平台</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-table.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css"/>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
 </head>
 <body>
 <div class="top">
@@ -38,64 +43,10 @@
     <div class="ser">
       <input type="" name=""><button>搜索</button>
     </div>
-    <table>
-      <tr>
-        <th style="width: 43.33%;">企业名称</th>
-        <th style="width: 23.33%;">规模(人)</th>
-        <th style="width: 33.33%;">联系方式</th>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-      <tr>
-        <td>河北志晟信息技术股份有限公司</td>
-        <td>1000</td>
-        <td>李先生<br>0316-5555555</td>
-      </tr>
-
+    <table id="vrHandle-info" border="" cellspacing="" cellpadding="">
+          
     </table>
-    <div class="page">
-      <ul>
-        <li><a>上一页</a></li>
-        <li class="cur"><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a>下一页</a></li>
-      </ul>
-    </div>
+    
   </div>
 </div>
 <script>
@@ -109,6 +60,58 @@
 	  text = $(this).text();
 	  $(this).parents('li').find('em').text(text);
 	});
+	//fetch请求数据
+	fetch('./data/devdata.json').then(function(response) {
+	  return response.json();
+	}).then(function(data) {
+	  console.log(data.datas);
+	  loadDataInfo(data.datas)
+	}).catch(function(e) {
+	  console.log("Oops, error");
+	});
+	//
+	function loadDataInfo(result) {
+		console.log()
+        var dataList = [];
+        dataList = result || [];
+        $('#vrHandle-info').bootstrapTable('destroy').bootstrapTable({
+            columns: [
+                {
+                    field: 'InControl',
+                    title: '企业名称',
+                    align: 'center'
+                },
+                {
+                    field: 'scale',
+                    title: '规模（人）',
+                    align: 'center'
+                },
+              
+                {
+                    field: 'phone',
+                    title: '联系方式',
+                    formatter: function (value, row, index) {
+                    	console.log(row)
+                        return row.Contacts+'<br/>'+value;
+                    },
+                    align: 'center'
+                },
+               
+            ],
+            data: dataList,
+            striped: true,  //表格显示条纹
+            pagination: true, //启动分页
+            pageSize: 10,  //每页显示的记录数
+            pageNumber: 1, //当前第几页
+            pageList: [],  //记录数可选列表
+            search: false,  //是否启用查询
+            showColumns: false,  //显示下拉框勾选要显示的列
+            showRefresh: false,  //显示刷新按钮
+            onClickRow: function (e) {
+            	console.log(e);
+            }
+        });
+    }
 </script>
 </body>
 </html>

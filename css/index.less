@@ -91,7 +91,7 @@ table {
     left: 0;
     top: 32px;
     z-index: 99;
-    background: #FFF;
+    background: #666;
     text-align: center;
     width: 100%;
     display: none;
@@ -107,10 +107,12 @@ table {
 
 .list {
     width: 340px;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     right: 0;
-    top: 0;
-    background: #FFF;
+    top: 42px;
+    background: #fff;
+    border-left:1px solid #ccc ;
 }
 
 .ser {
@@ -137,27 +139,7 @@ table {
     border-radius: 2px;
 }
 
-.list tr th {
-    background: #f1f1f1;
-    font-size: 14px;
-    line-height: 30px;
-}
 
-.list table {
-    width: 100%;
-}
-
-.list table tr td {
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #999;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.list table tr td:nth-child(1) {
-    padding: 15px;
-}
 
 .page {
     padding: 10px 0;
@@ -183,7 +165,14 @@ table {
 .page ul li.cur a {
     color: #177fd6;
 }
-
-.main {
-    position: relative;
+.fixed-table-container{
+    border: none!important;
+    .fixed-table-body{
+        border: none!important;
+        
+    }
+}
+#vrHandle-info{
+    border-color:#F5F5F5!important;
+    border-left: none!important;
 }
