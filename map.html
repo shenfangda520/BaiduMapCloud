@@ -99,22 +99,16 @@
   </div>
 </div>
 <script>
-var h =document.body.scrollHeight-33;
-var w =document.body.scrollWidth-340;
-console.log(h);
-document.getElementById('iframe').style.height= h+'px';
-document.getElementById('iframe').style.width= w+'px';
-
-$('.top ul li').hover(function(){
-  $(this).find('dl').show();
-},function(){
-  $(this).find('dl').hide();
-});
-
-$('.top ul dl dd a').click(function(){
-  text = $(this).text();
-  $(this).parents('li').find('em').text(text);
-});
+	$('.top ul li').hover(function(){
+	  $(this).find('dl').show();
+	},function(){
+	  $(this).find('dl').hide();
+	});
+	
+	$('.top ul dl dd a').click(function(){
+	  text = $(this).text();
+	  $(this).parents('li').find('em').text(text);
+	});
 </script>
 </body>
 </html>
