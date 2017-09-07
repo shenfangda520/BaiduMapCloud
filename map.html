@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" CONTENT="-1">
+<meta http-equiv="Cache-Control" CONTENT="no-cache">
+<meta http-equiv="Pragma" CONTENT="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>廊坊企业云服务平台</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="top">
+  <ul>
+    <li>
+    <em>廊坊市</em><img src="http://liyq.cloud.ds99.me/static/news/images/arrow.png" />
+    <dl>
+      <dd><a>安次区</a></dd>
+      <dd><a>广阳区</a></dd>
+      <dd><a>霸州市</a></dd>
+    </dl>
+    </li>
+    <li>地图</li>
+    <li>地形</li>
+    <li>卫星</li>
+    <li>街景</li>
+    <li><a href="">返回企业库</a></li>
+  </ul>
+</div>
+<div class="main">
+  <!--<iframe id="iframe" src="http://liyq.cloud.ds99.me/home/index/"></iframe>-->
+  <div class="list">
+    <div class="ser">
+      <input type="" name=""><button>搜索</button>
+    </div>
+    <table>
+      <tr>
+        <th style="width: 43.33%;">企业名称</th>
+        <th style="width: 23.33%;">规模(人)</th>
+        <th style="width: 33.33%;">联系方式</th>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+      <tr>
+        <td>河北志晟信息技术股份有限公司</td>
+        <td>1000</td>
+        <td>李先生<br>0316-5555555</td>
+      </tr>
+
+    </table>
+    <div class="page">
+      <ul>
+        <li><a>上一页</a></li>
+        <li class="cur"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a>下一页</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+var h =document.body.scrollHeight-33;
+var w =document.body.scrollWidth-340;
+console.log(h);
+document.getElementById('iframe').style.height= h+'px';
+document.getElementById('iframe').style.width= w+'px';
+
+$('.top ul li').hover(function(){
+  $(this).find('dl').show();
+},function(){
+  $(this).find('dl').hide();
+});
+
+$('.top ul dl dd a').click(function(){
+  text = $(this).text();
+  $(this).parents('li').find('em').text(text);
+});
+</script>
+</body>
+</html>
