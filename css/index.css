@@ -9,6 +9,9 @@ body,
   width: 100%;
   overflow: hidden;
 }
+.main{
+  height:100%;
+}
 ul li {
   list-style-type: none;
 }
@@ -57,9 +60,7 @@ table {
   font-weight: bold;
 }
 .top ul li:nth-child(2) {
-  background: #deedff;
-  color: #2f51bd;
-  font-weight: bold;
+  
 }
 .top ul li:last-child {
   float: right;
@@ -145,4 +146,67 @@ table {
 #vrHandle-info {
   border-color: #F5F5F5!important;
   border-left: none!important;
+}
+
+
+/*InfoWindow*/
+.fitem {
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  line-height: 18px;
+}
+
+.fitem th {
+  width: 65px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.fitem td {
+  font-size: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.BMapLib_SearchInfoWindow .BMapLib_bubble_title {
+  background-color: #1080cc !important;
+  color: #fff;
+}
+
+.BMapLib_SearchInfoWindow .BMapLib_bubble_tools div {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.BMapLib_SearchInfoWindow .BMapLib_sendToPhone {
+  background: none !important;
+}
+
+.pano_close{
+  left:10px !important;
+  bottom:50px !important;
+}
+
+.marker-panel {
+  float: left;
+  width: 122px;
+  height: 101px;
+  background-color:#fff;
+}
+
+#myDesc {
+  float: left;
+}
+
+#myImg {
+  width: 120px;
+  height: 80px;
+  margin:1px 1px;
+}
+
+.Active{
+     background: #deedff;
+    color: #2f51bd;
+    font-weight: bold;
 }

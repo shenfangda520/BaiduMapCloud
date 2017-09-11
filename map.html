@@ -15,9 +15,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-table.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css"/>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-table.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+<link rel="stylesheet" href="https://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css">
 </head>
 <body>
 <div class="top">
@@ -26,12 +24,19 @@
     <em>廊坊市</em><img src="http://liyq.cloud.ds99.me/static/news/images/arrow.png" />
     <dl>
       <dd><a>安次区</a></dd>
-      <dd><a>广阳区</a></dd>
       <dd><a>霸州市</a></dd>
+      <dd><a>广阳区</a></dd>
+      <dd><a>固安县</a></dd>
+      <dd><a>永清县</a></dd>
+      <dd><a>香河县</a></dd>
+      <dd><a>三河市</a></dd>
+      <dd><a>文安县</a></dd>
+      <dd><a>大厂县</a></dd>
+      <dd><a>廊坊市</a></dd>
     </dl>
     </li>
-    <li>地图</li>
-    <li>地形</li>
+    <li class="Active">地图</li>
+    <!--<li>地形</li>-->
     <li>卫星</li>
     <li>街景</li>
     <li><a href="">返回企业库</a></li>
@@ -49,6 +54,12 @@
     
   </div>
 </div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=FovGfLyaU2eYMMQaiq8jEKIU"></script>
+<script src="js/SearchInfoWindow_min.js"></script>
+<script src="js/MapMain.js"></script>
 <script>
 	$('.top ul li').hover(function(){
 	  $(this).find('dl').show();
@@ -56,10 +67,37 @@
 	  $(this).find('dl').hide();
 	});
 	
-	$('.top ul dl dd a').click(function(){
+	$('.top ul dl dd').click(function(){
 	  text = $(this).text();
 	  $(this).parents('li').find('em').text(text);
 	});
+	//
+	$('.top ul dl dd').on('click',function(){
+		MapHandle.centerPoint($(this).index())
+	})
+	//地图
+	$('.top ul li').eq(1).click(function(){
+		$(this).addClass('Active').siblings().removeClass('Active')
+		MapHandle.setMapType(0)
+		console.log('这是地图')
+	})
+//	//地形
+//	$('.top ul li').eq(2).click(function(){
+//		$(this).addClass('Active').siblings().removeClass('Active')
+//		console.log('这是地形地图')
+//	})
+	//卫星
+	$('.top ul li').eq(2).click(function(){
+		MapHandle.setMapType(1)
+		$(this).addClass('Active').siblings().removeClass('Active')
+		console.log('这是卫星地图')
+	})
+	//街景地图
+	$('.top ul li').eq(3).click(function(){
+		$(this).addClass('Active').siblings().removeClass('Active')
+		MapHandle.setMapType(2);
+		console.log('这是街景地图')
+	})
 	//fetch请求数据
 	fetch('./data/devdata.json').then(function(response) {
 	  return response.json();
@@ -71,7 +109,6 @@
 	});
 	//
 	function loadDataInfo(result) {
-		console.log()
         var dataList = [];
         dataList = result || [];
         $('#vrHandle-info').bootstrapTable('destroy').bootstrapTable({
@@ -95,8 +132,7 @@
                         return row.Contacts+'<br/>'+value;
                     },
                     align: 'center'
-                },
-               
+                }
             ],
             data: dataList,
             striped: true,  //表格显示条纹
@@ -108,7 +144,7 @@
             showColumns: false,  //显示下拉框勾选要显示的列
             showRefresh: false,  //显示刷新按钮
             onClickRow: function (e) {
-            	console.log(e);
+            	MapHandle.showInfoWindow(e);
             }
         });
     }
